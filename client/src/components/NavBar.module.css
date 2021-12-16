@@ -1,0 +1,13 @@
+.nav{
+    height: 30vh;
+    background-color: rgb(28, 58, 112);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+
+}
