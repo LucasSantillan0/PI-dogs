@@ -12,7 +12,7 @@ export default function NavBar (){
         <ButtonLink to="/home" text="Search"/>
         </div>
         <Routes>
-            <Route path="/" element={<AsideBar/>}/>
+            <Route path="/*" element={<AsideBar/>}/>
             <Route path="create" element={<CreateDog/>}/>
         </Routes>
 </nav>

@@ -9,7 +9,7 @@ import * as actionCreators from "./actions/index"
 import CreateDog from './components/CreateDog';
 
 function App(props) {
-  useEffect(()=>{props.initStore("http://localhost:3001/dogs")}, [])
+  
   return (
     <div className="App">
       <Routes>

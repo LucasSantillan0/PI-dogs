@@ -1,17 +1,24 @@
 .aside{
+    margin-top: 20px;
     height: fit-content;
     width: fit-content;
     color: white;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 25px;
 }
 .text{
     height: 35px;
     font-size: 20px;
     width: 40vw;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 .checkbox{
     margin-top: 30px;
-    margin-right: 40%;
+    margin-right: auto;
     border-radius: 1em;
 }
 .checkbox:hover{
@@ -28,4 +35,46 @@
 .button:hover{
     cursor:pointer;
     background-color: gainsboro;
+    transform: scale(1.01);
+}
+.pages{
+    margin: 0 0 15px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+.pages button{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%; 
+    border: black 1px solid;
+}
+.pages button:hover{
+    cursor: pointer;
+    background-color: rgb(224, 222, 222);
+    transform: scale(1.1);
+}
+.nobackground{
+ margin: 10px;
+ background:none;
+ color: white;
+ padding: 0;
+ border: 0;
+}
+.icon{
+    width: 35px;
+}
+.icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.iconActive{
+    width: 35px;
+    filter: invert(100);
+}
+.iconActive:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }

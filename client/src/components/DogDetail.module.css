@@ -1,0 +1,46 @@
+.container{
+    z-index: 100;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(145, 145, 145, 0.11);
+    position: absolute;
+    backdrop-filter: blur(5px);
+
+}
+.container article{
+    background-color: white;
+    width:fit-content;
+    height: fit-content;
+    padding: 25px;
+    margin:0 auto;
+    margin-top: 30px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: flex-start;
+  }
+  .container img{
+    border-radius: 3px;
+     max-height: 500px;
+     max-width: 900px;
+  }
+  .exit{
+      text-decoration: none;
+      background-color: tomato;
+      color: white;
+      font-weight: bolder;
+      padding: 10px 15px;
+      border-radius: 10px;
+      position: absolute;
+      left: 90vw;
+
+  }
+  .text{
+    width: 20vw;
+    padding: 0 15px;
+    text-align: left;
+  }
+  .text span{
+      font-weight: bold;
+  }

@@ -11,10 +11,18 @@ module.exports = (sequelize) => {
     height:{
       type:DataTypes.INTEGER,
       allowNull: false,
+      validate:{
+        min:10,
+        max:90
+      }
     },
     weight:{
       type:DataTypes.INTEGER,
       allowNull: false,
+      validate:{
+        max: 55,               
+        min: 5 ,
+      }
     },
     life_span:{
       type: DataTypes.INTEGER,
@@ -25,6 +33,11 @@ module.exports = (sequelize) => {
     },
     description:{
       type:DataTypes.TEXT
+    },
+    DB:{
+      type:DataTypes.BOOLEAN,
+      defaultValue:true
+
     }
   })
   

@@ -1,0 +1,33 @@
+.container{
+    text-align: left;
+}
+.container label{
+    color:white;
+    font-weight: bold;
+}
+.container input{
+    width: 200px;
+    height: 15px;
+    margin: 2px;
+}
+.container div{
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 2px;
+    margin-left: 0px;
+}
+
+.container button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+.active{
+    background-color: white;
+    border: 1px solid black;
+}
+.inactive{
+    background-color: gray;
+    border: 1px solid black;
+}

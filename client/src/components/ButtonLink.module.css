@@ -1,5 +1,5 @@
 .button{
-    background-color: cornflowerblue;
+    background-color: rgb(212, 220, 236);
     text-decoration: none;
     color:black;
     width: fit-content;
@@ -12,4 +12,5 @@
 }
 .button:hover{
     box-shadow: rgb(34, 51, 82) 0 3px 9px;;
+    transform: scale(1.01);
 }
