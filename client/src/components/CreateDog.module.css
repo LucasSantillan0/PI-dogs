@@ -31,3 +31,8 @@
     background-color: gray;
     border: 1px solid black;
 }
+.flex{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from "../actions/index"
 import s from "./DogDetail.module.css"
 
+const dogeImage ="https://phantom-marca.unidadeditorial.es/252acdd64f48851f815c16049a789f23/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/19/16188479459744.jpg"
+
 function DogDetail ({dogs}){
 
     const {id, DB}=useParams()
@@ -22,7 +24,7 @@ function DogDetail ({dogs}){
     if (dog.loading) return <div className={s.container}> <article>Loading</article></div>
     return <div className={s.container}>
         <article> 
-        <img src={dog.image?dog.image.url: "https://phantom-marca.unidadeditorial.es/252acdd64f48851f815c16049a789f23/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/19/16188479459744.jpg" } ></img>
+        <img src={dog.reference_image_id?`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`: dogeImage }  ></img>
         <div className={s.text}> 
             <NavLink to="/home" className={s.exit}>X</NavLink>
             <h2>{dog.name}</h2>

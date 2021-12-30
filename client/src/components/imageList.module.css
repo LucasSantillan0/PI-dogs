@@ -1,0 +1,22 @@
+.container{
+
+    background-color:white;
+    width: 350px;
+    height:200px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow:auto;
+    gap: 5px;
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
+}
+.card{
+    width: 135px;
+    border-radius: 5px;
+    max-height: 135px;
+}
+.card:hover{
+    border:2px solid gray;
+    cursor: pointer;
+}

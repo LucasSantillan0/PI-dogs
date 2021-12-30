@@ -34,11 +34,15 @@ module.exports = (sequelize) => {
     description:{
       type:DataTypes.TEXT
     },
+    
     DB:{
       type:DataTypes.BOOLEAN,
       defaultValue:true
 
-    }
+    },
+    reference_image_id:{
+      type:DataTypes.STRING,
+    },
   })
   
 };

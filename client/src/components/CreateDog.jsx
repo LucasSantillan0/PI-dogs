@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useEffect } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
-
+import ImageList from "./imageList";
 import * as actionCreators from "../actions/index"
 import s from "./CreateDog.module.css"
 
@@ -14,6 +14,7 @@ function CreateDog (props){
     const [temperaments, setTemperaments]=useState([])
     const [data,setData] =useState({})
     const [error, setError] =useState("")
+    const [image,setImage]= useState("")
 
     useEffect(()=>{
         fetch("http://localhost:3001/temperament")
@@ -50,7 +51,7 @@ function CreateDog (props){
             'Content-Type': 'application/json'
         },
 
-            body: JSON.stringify({...data, temperaments})
+            body: JSON.stringify({...data, temperaments, reference_image_id:image})
           })
           .then(props.initStore("http://localhost:3001/dogs"))
         
@@ -70,7 +71,7 @@ function CreateDog (props){
     }
 
 
-    return <form onSubmit={e=>onSubmit(e)} className={s.container}>
+    return <div className={s.flex}><form onSubmit={e=>onSubmit(e)} className={s.container}>
         <label for="name">Name: </label> <input type="text" name="name" id="name" onChange={(e)=>inputChange(e)}/> <br></br>
         <label for="height">Height: </label> <input type="number" name="height" id="height"onChange={(e)=>inputChange(e)}/><br></br>
         <label for="weight">Weight: </label> <input type="number" name="weight" id="weight"onChange={(e)=>inputChange(e)}/><br></br>
@@ -80,7 +81,8 @@ function CreateDog (props){
         </div>
 
         <button type="submit">SUBMIT</button><span>{error}</span>
-    </form>
+        
+    </form><ImageList setImage={setImage}/></div>
 }
 function mapDispatchToProps(dispatch){
     return bindActionCreators(actionCreators,dispatch)

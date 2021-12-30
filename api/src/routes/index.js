@@ -93,7 +93,7 @@ router.get("/dogs",   async (req, res)=>{
     }
     })
   .then(data=>{
-      if (reverse=="true"){ 
+      if (reverse=="1"){ 
         res.send (data.reverse().splice(start+1,8))       
       }
       res.send(data.splice(start,8))
@@ -154,9 +154,9 @@ router.get("/dogs/:idRaza",   async (req, res)=>{
 router.post("/dog",   async (req, res)=>{
    try{
      console.log(DogTemperament)
-  const { name, height, weight, life_span, origin, description, temperaments} = req.body;
+  const { name, height, weight, life_span, origin, description, temperaments,  reference_image_id} = req.body;
   let arr =[]
-  const dog = await Dog.create({name:name, height:height, weight:weight, life_span:life_span, origin, description, DB:true})
+  const dog = await Dog.create({name:name, height:height, weight:weight, life_span:life_span, origin, description, DB:true,  reference_image_id: reference_image_id})
   for (const element in temperaments){
     let temp =await Temperament.findOrCreate({
       where:{
@@ -188,5 +188,11 @@ router.get("/temperament",   async (req, res)=>{
     res.send(e)
   }
 })
-
+router.get("/images", async (req, res)=>{
+  try{
+    const response = await axios.get ("https://api.thedogapi.com/v1/breeds")
+    res.send(response.data)
+  }
+  catch (e){res.send(e)}
+})
 module.exports = router;

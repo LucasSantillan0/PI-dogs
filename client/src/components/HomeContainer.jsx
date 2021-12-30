@@ -5,8 +5,11 @@ import Dogs from "./Dogs"
 import DogDetail from "./DogDetail"
 
  export default function HomeContainer (){
+
     return <section className={s.section} >
+
     <Dogs/>
+
     <Routes>
         <Route path="/:id/:DB" element={<DogDetail/>}></Route>
     </Routes>
