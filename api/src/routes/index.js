@@ -67,11 +67,11 @@ router.get("/dogs",   async (req, res)=>{
 
     temperament.forEach(e=>{
       tempString= tempString+ e.dataValues.temperament+ " "
-      console.log(tempString)
+
     })
     
     dogs[i]={...dogs[i].dataValues,temperament: tempString }
-    console.log(dogs[i])
+    
   }
   if(DB){
       res.send(dogs.length?dogs.splice(start,8):[{name:"prueba", weight:"10"}])
@@ -81,12 +81,11 @@ router.get("/dogs",   async (req, res)=>{
   axios.get("https://api.thedogapi.com/v1/breeds")
   .then(response=>{
     if(name){
-    console.log("filtered")
+   
     return response.data.filter(e=>e.name.toLowerCase().includes(name.toLowerCase())) 
     }
     else{
       fetches++
-      console.log("unfiltered")
       if (weight!=0){
         return response.data.sort(orderFunctions[weight])
       }

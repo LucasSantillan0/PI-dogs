@@ -7,9 +7,12 @@ const { Dog, conn } = require('../../src/db.js');
 const agent = session(app);
 const dog = {
   name: 'Pug',
+  height :15,
+  weight: 15,
+  life_span: 15
 };
 
-describe('Videogame routes', () => {
+describe('Routes', () => {
   before(() => conn.authenticate()
   .catch((err) => {
     console.error('Unable to connect to the database:', err);
