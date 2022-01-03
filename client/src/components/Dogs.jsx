@@ -8,7 +8,7 @@ import s from "./Dogs.module.css"
 
 function Dogs (props){
 
-    if(props.dogs[0]=="LOADING"){
+    if(props.dogs[0]==="LOADING"){
         return <div className={s.spinner}></div>
     }
     return <div className={s.container}>

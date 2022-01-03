@@ -16,7 +16,7 @@ function DogDetail ({dogs}){
 
     useEffect(()=>{
        setDog({loading:true})
-       fetch(`http://localhost:3001/dogs/${id}?DB=${DB==1?"true":"false"}`)
+       fetch(`http://localhost:3001/dogs/${id}?DB=${ Number(DB)===1?"true":"false"}`)
        .then(response => response.json())
        .then(data=>setDog(data))
     },[id,DB])
@@ -24,7 +24,7 @@ function DogDetail ({dogs}){
     if (dog.loading) return <div className={s.container}> <article>Loading</article></div>
     return <div className={s.container}>
         <article> 
-        <img src={dog.reference_image_id?`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`: dogeImage }  ></img>
+        <img src={dog.reference_image_id?`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`: dogeImage }  alt =""></img>
         <div className={s.text}> 
             <NavLink to="/home" className={s.exit}>X</NavLink>
             <h2>{dog.name}</h2>

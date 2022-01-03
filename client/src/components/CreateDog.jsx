@@ -26,7 +26,7 @@ function CreateDog (props){
         setTemperaments(allTemperaments.filter(e=>e.active).map(e=>e.temperament))
     },[allTemperaments])
     function validate(data){
-        if(data.height>50 || data.weight>100 || data.lifeSpan>50 ){
+        if(data.height>50 || data.weight>100 || data.life_span>50 ){
             return "Error, invalid data"
         }
     }

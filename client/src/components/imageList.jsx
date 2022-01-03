@@ -16,6 +16,6 @@ export default function ImageList({setImage}){
     }
 
     return <div className={s.container}>
-      {images.map(imageId=><Bounce left><img src={`https://cdn2.thedogapi.com/images/${imageId}.jpg`} className={s.card} onClick={e=>handleClick(e,imageId)}/></Bounce>)}
+      {images.map(imageId=><Bounce left><img src={`https://cdn2.thedogapi.com/images/${imageId}.jpg`} alt="" className={s.card} onClick={e=>handleClick(e,imageId)}/></Bounce>)}
     </div>
 }

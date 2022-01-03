@@ -10,7 +10,7 @@ export default function DogCard ({data}){
     <article className={ s.card}> 
     <NavLink to={data.DB? "/home/"+data.id+"/1":"/home/"+data.id+"/0"} className={s.link}>
         <div className = {s.cardHeader}>
-        <img src={data.reference_image_id?`https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg`: dogeImage } ></img>
+        <img src={data.reference_image_id?`https://cdn2.thedogapi.com/images/${data.reference_image_id}.jpg`: dogeImage } alt=""></img>
         </div>
         <div>
             

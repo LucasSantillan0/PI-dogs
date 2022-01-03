@@ -2,11 +2,10 @@ import './App.css';
 import { Routes, Route } from 'react-router';
 import LandPage from './pages/LandPage';
 import Home from './pages/Home';
-import { useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from "./actions/index"
-import CreateDog from './components/CreateDog';
+
 
 function App(props) {
   

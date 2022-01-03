@@ -20,7 +20,7 @@ function Asidebar (props){
     const [weight, setWeight]=useState(0)
 
     useEffect(()=>{
-        updateStore(bred,page,DB, reverse)}, [page])
+        updateStore()}, [page])
 
     function updateStore(){ 
     console.log(DB)
@@ -64,8 +64,8 @@ function Asidebar (props){
     <input type="text" name = "bred" placeholder="Search a bred" onChange={e=>handleChange(e)} value={bred} className={s.text}/><br></br> 
     Only my dogs <input type="checkbox" name="DB" onChange={handleChangeDB} value={DB} className={s.checkbox}/> <br></br>
     <div>
-    <button onClick={e=>handleReverse(e)} className={s.nobackground}> <img className={reverse==1?s.iconActive: s.icon}  src={alphabetic}></img> </button>
-    <button onClick={e=>handleWeight(e)} className={s.nobackground}><img className={weight!=0?s.iconActive: s.icon}  src={numeric}></img> </button>
+    <button onClick={e=>handleReverse(e)} className={s.nobackground}> <img className={reverse==1?s.iconActive: s.icon}  src={alphabetic} alt =""></img> </button>
+    <button onClick={e=>handleWeight(e)} className={s.nobackground}><img className={weight!=0?s.iconActive: s.icon}  src={numeric} alt =""></img> </button>
     </div>   
     <button type="submit" className={s.button}>Search</button> 
     </form>

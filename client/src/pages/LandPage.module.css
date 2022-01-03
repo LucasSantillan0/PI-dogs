@@ -1,16 +1,9 @@
-.container{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    backdrop-filter: blur(2px);
-}
+
 
 .bg{
     width: 100vw;
     height: 100vh;
-    background-image: url("https://estaticos-cdn.prensaiberica.es/clip/df76e832-ae55-44f0-a198-286c756f4df4_16-9-discover-aspect-ratio_default_0.jpg");
+    background-image: url("../dog-wallpaper-hd-dog-wallpapers-1998667338.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     position: absolute;
@@ -19,10 +12,27 @@
 }
 .title{
 
-    box-shadow: black 0px 6px 25px;
-    font-size: 65px;
-    padding: 0 20px;
+    text-align: left;
+    font-size: 45px;
     border-radius: 4px;
     width: 40vw;
-    margin: 40vh auto 0 auto;
+    margin: 5vh 0 0 5vw;
+    text-shadow: white 2px 2px 1px;
+    
+}
+.titleBox{
+    background-color: rgba(0, 0, 0, 0.123);
+    backdrop-filter: blur(2px);
+    clip-path: polygon(0 15%, 65% 15%, 100% 100%, 0% 100%);
+}
+.entry{
+    width:30vw;
+    height:600px;
+    position: absolute; 
+    left: 50vw;
+    top:50vh
+}
+.button{
+    position: relative;
+    left:-600px;
 }
